@@ -1,0 +1,12 @@
+
+public class Rectangle {
+//	declare instance variables
+//	characteristics
+	double length;
+	double width;
+	String name;
+	
+	
+//	instance methods 
+	
+}

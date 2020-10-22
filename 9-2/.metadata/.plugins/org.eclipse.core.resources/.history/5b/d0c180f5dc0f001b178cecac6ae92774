@@ -1,0 +1,81 @@
+// driver classes must have main method
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import java.util.Random;
+
+public class ATMachine {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		long p = random.nextInt(10000000);
+		String s = String.valueOf(p);
+		
+//		String acct = JOptionPane.showInputDialog("Would You Like to Open Account?");
+		char startchoice = showStartMenu();
+		while (startchoice != 'n') {
+			if(startchoice == 'y') {
+				JOptionPane.showMessageDialog(null, "Account: " + s +" created \n");
+			}
+			
+			showStartMenu();
+		}
+		
+		
+		double bal = Double.parseDouble(JOptionPane.showInputDialog("Enter starting balance"));
+		boolean savingsOpt = Boolean.parseBoolean(JOptionPane.showInputDialog("Would You Like to make this a savings account?"));
+		
+		BankAccount userAcct = new BankAccount (s, bal, savingsOpt);
+		
+		char menuchoice = showMenu();
+		
+		while(menuchoice != 'q') {
+			
+			//handle deposit option
+			if(menuchoice == 'd') {
+				double deposit = Double.parseDouble(JOptionPane.showInputDialog("Enter deposit amount"));
+				userAcct.deposit(deposit);
+				JOptionPane.showMessageDialog(null, "Deposit Successful!\n" + userAcct);
+			}
+			//handle withdraw option
+			else if (menuchoice == 'w') {
+				double withdraw = Double.parseDouble(JOptionPane.showInputDialog("Enter amount to withdraw"));
+				if(userAcct.withdraw(withdraw) == true) {
+					JOptionPane.showMessageDialog(null, "Withdrawal Success! \n" + userAcct);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Insufficient funds \n" + userAcct);
+				}
+			}
+			//handle check balance option
+			else if(menuchoice == 'c') {
+				JOptionPane.showMessageDialog(null, userAcct);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Invalid Menu Option");
+			}
+			
+			menuchoice = showMenu();
+		}//ends while !q loop
+		
+		
+		
+		
+
+	}//end main
+	public static char showMenu() {
+		String menumsg = "Welcome to the ATMachine\n\n";
+		menumsg += "(d)eposit\n";
+		menumsg += "(w)ithdraw\n";
+		menumsg += "(c)heck-balance\n";
+		menumsg += "(q)uit\n";
+		
+		return JOptionPane.showInputDialog( menumsg ).toLowerCase().charAt(0);
+	}//end showMenu
+	public static char showStartMenu() {
+		String startmsg = "Bank of of Mellon \n";
+		startmsg += "Create a new account? y/n";
+		ImageIcon bank = new ImageIcon("bank.png");
+		return JOptionPane.showInputDialog( startmsg ).toLowerCase().charAt(0);
+	}
+
+}

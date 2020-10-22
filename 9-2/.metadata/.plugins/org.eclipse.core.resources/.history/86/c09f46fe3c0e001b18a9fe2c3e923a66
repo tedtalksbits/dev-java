@@ -1,0 +1,21 @@
+
+public class BankAccount {
+//	instance variables
+	
+	private String accNumber;
+	private double accBalance;
+	
+// constructor method
+	public BankAccount(String a, double b) {
+		this.accNumber = a;
+		this.accBalance = b;
+	}
+//	getter methods
+	public String getAccNum() {
+		return this.accNumber;
+	}
+	
+	public double getBalance() {
+		return this.accBalance;
+	}
+}

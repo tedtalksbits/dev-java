@@ -1,0 +1,18 @@
+//dummy driver just for testing 
+public class BankAccDriver1 {
+
+	public static void main(String[] args) {
+		
+		BankAccount newAccount = new BankAccount ("100292", 20000.00);
+		BankAccount johnAccount = new BankAccount ("100292", 20000.00);
+		
+		if(newAccount.getBalance() > johnAccount.getBalance()) {
+			System.out.println("New account has a bigger balance with $ " + newAccount.getBalance());
+		
+		}
+		else {
+			System.out.println("John account has a bigger balance with $ " + johnAccount.getBalance());
+		}
+	}
+	
+}

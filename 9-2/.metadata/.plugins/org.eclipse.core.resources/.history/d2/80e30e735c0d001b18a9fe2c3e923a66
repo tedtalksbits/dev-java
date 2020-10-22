@@ -1,0 +1,45 @@
+
+public class Rectangle {
+//	declare instance variables
+//	characteristics
+	double length;
+	double width;
+	String name;
+	
+	
+//	instance methods 
+	public Rectangle(double l, double w, String n) {
+		
+		length = l;
+		width = w;
+		name = n;
+		
+	}
+	
+//	getter methods
+	public double getLength() {
+		return length;
+	}
+	public double getWidth() {
+		return width;
+	}
+	public String getName() {
+		return name;
+	}
+	
+//	instance methods 
+	public double findArea() {
+		return width * length;
+	}
+	
+	public double findPerimeter() {
+		return 2 * length + (2 * width);
+	}
+	
+//	output toString
+	public String toString() {
+		return "Rectangle with the name of " +name+ ". Width of " +width+ " Lenght of " + length;
+	}
+	
+	
+}

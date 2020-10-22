@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+
+public class Homework1 {
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner ageObj = new Scanner(System.in);
+	    int age;
+	    
+	    // Prompt
+	    System.out.println("Whats your age?"); 
+	    age = ageObj.nextInt();   
+	       
+	    System.out.println("your age is: " + age * 2); 
+	}
+	
+
+}

@@ -1,0 +1,9 @@
+
+public class ATMachine {
+
+	public static void main(String[] args) {
+		// driver classes must have main method
+
+	}
+
+}

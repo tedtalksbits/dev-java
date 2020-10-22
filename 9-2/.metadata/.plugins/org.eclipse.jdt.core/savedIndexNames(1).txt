@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+/Users/tedaneblake/Documents/dev-java/9-2/.metadata/.plugins/org.eclipse.jdt.core
+3526815180.index
+1010339040.index
+1768267360.index
+995444985.index
+2723944771.index
+2272001868.index
+2771508570.index
+1280473199.index

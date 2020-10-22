@@ -1,0 +1,28 @@
+import javax.swing.*;
+public class FirstStore {
+
+	public static void main(String[] args) {
+		
+		String[] products = {"HP Laptop", "Dell Laptop", "Macbook Pro", "Chrome Book", "Lenovo Laptop", "Generic Laptop"};
+		double[] prices = {1200.89, 1100.99, 1599.99, 499.97, 1280.86, 200.98};
+		int[] inventory = {19, 9, 10, 25, 6, 100};
+		
+		//get menu option and show menu
+		int menuoption = showMenu(products, prices);
+	}
+	
+	public static int showMenu(String[] products, double[] prices) {
+		String menumsg = "Welcome to the laptop store!! \n\n";
+		menumsg += "-1 to view inventory\n";
+		menumsg += "-2 to quit program\n\n";
+		
+		//output should be : index - products $price
+		
+		for(int i = 0; i < products.length; i++ ) {
+			
+			menumsg += i + " - " + products[i] + " $" +prices[i] + "\n";
+		}
+		
+		return Integer.parseInt( JOptionPane.showInputDialog(menumsg));
+	}
+}

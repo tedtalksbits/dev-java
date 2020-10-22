@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Homework1 {
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner tempCheck = new Scanner(System.in);
+	    int f;
+	    
+	    // Prompt
+	    System.out.println("Enter Farenheit Value:"); 
+	    f = tempCheck.nextInt();   
+	    
+	    //formula
+	    float c = (f - 32) * 5/9; 
+	    
+	    //conditions
+	    
+	    if(c > 0) {
+	    System.out.println("The temps are: " +f+ " Degres Farenheit, or : " +c+ " Degrees Celcius \n  Wear a coat!");
+	    }
+	    else {
+		    System.out.println("The temps are: " +f+ " Degres Farenheit, or : " +c+ " Degrees Celcius \n  Wear a Jacket!");
+	    }
+	}
+	
+
+}

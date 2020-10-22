@@ -1,0 +1,29 @@
+
+public class Rectangle {
+//	declare instance variables
+//	characteristics
+	double length;
+	double width;
+	String name;
+	
+	
+//	instance methods 
+	public Rectangle(double l, double w, String n) {
+		
+		length = l;
+		width = w;
+		name = n;
+		
+	}
+	
+//	getter methods
+	public double getLength() {
+		return length;
+	}
+	public double getWidth() {
+		return width;
+	}
+	public String getName() {
+		return name;
+	}
+}

@@ -1,0 +1,13 @@
+
+public class RectangleDriver {
+
+	public static void main(String[] args) {
+		
+		Rectangle myRectangle = new Rectangle (2.3, 1.2, "Small Guy");
+		Rectangle BFR = new Rectangle (200.45, 500, "BFR");
+		
+		System.out.println(myRectangle.toString());
+		System.out.println(BFR.toString());
+	}
+
+}

@@ -1,0 +1,23 @@
+// driver classes must have main method
+import javax.swing.JOptionPane;
+
+public class ATMachine {
+
+	public static void main(String[] args) {
+		
+		String acct = JOptionPane.showInputDialog("enter account number");
+		double bal = Integer.parseInt(JOptionPane.showInputDialog("Enter startiung balance"));
+		
+		BankAccount userAcct = new BankAccount (acct, bal);
+		
+		char menuchoice = showMenu();
+		
+		
+		
+
+	}//end main
+	public static String showMenu(String menu) {
+		return 
+	}//end showMenu
+
+}
